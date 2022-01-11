@@ -1,5 +1,5 @@
 :root {
-    --color--background: pink;
+    --color--background: rgb(238, 245, 238);
 }
 
 
@@ -7,7 +7,7 @@ header {
     width: auto;
     display: grid;
     grid-template-columns: .5fr 1fr;
-    background-color: var();
+    background-color: var(--color--background);
 }
 
 nav {
@@ -16,14 +16,18 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     align-content: center;  
+    grid-gap: .9em;
+
 }
 
 nav > p {
     justify-self: center;
     margin: 0;
+    font-size: 1.3em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     header{
         grid-template-columns: auto;
     }
