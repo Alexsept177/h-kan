@@ -1,24 +1,46 @@
+:root {
+    --color--background: pink;
+}
+
+
 header {
     width: auto;
     display: grid;
     grid-template-columns: .5fr 1fr;
-}
-
-header > h1 {
-    grid-column: auto;
+    background-color: var();
 }
 
 nav {
     display: grid;
     grid-column: 2;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    align-content: center;
-   
+    align-content: center;  
 }
 
 nav > p {
     justify-self: center;
     margin: 0;
 }
+
+@media screen and (max-width: 500px) {
+    header{
+        grid-template-columns: auto;
+    }
+    h1 {
+        justify-self: center;
+    }
+    nav {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    }
+   nav > p {
+    justify-self: center;
+    margin: 0;
+    }
+}
+
 
