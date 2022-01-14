@@ -1,4 +1,32 @@
+:root {
+    --color--background: rgb(238, 245, 238);
+}
+
+
 body {
     width: 100%;
     height: 100%;
+    background-color: var(--color--background);
+    
 }
+
+section {
+    display: grid;
+    grid-template-areas: 
+    " . h ."   
+    " . t ."    
+    " n . m";
+}
+body section h1 {
+    grid-area: h 1 auto;
+    justify-self: center;
+}
+
+body section p {
+    grid-area: n / 3 / 1;
+}
+
+
+
+
+
