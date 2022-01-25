@@ -14,28 +14,47 @@ body {
 section {
     display: grid;
     grid-template-areas: 
-    " h h h"   
-    " m m m"    
-    " f f f";
+    " h1 . ."   
+    " img . p";
 }
 body section h1 {
-    grid-area: h / 1 / 1;
+    grid-area: h1 ;
     justify-self: center;
     font-size: 2em;
     font-family: 'Nunito', sans-serif;
 }
-
+body section img {
+    grid-area: img ;
+    width: 100%;
+}
 body section p {
-    grid-area: m / 2 / 3;
-    font-size: 1.8em;
+    grid-area: p ;
+    font-size: 1.5em;
     text-align: center;
     padding: 2em 2em 0em 2em;
     font-family: 'Nunito', sans-serif;
 }
 
-body section img {
-    grid-area: f / 1 / 2;
-    width: 100%;
+
+
+@media screen and (max-width: 1070px)  {
+    section  {
+        display: grid;
+        grid-template-areas: 
+        " h1 "
+        " img "
+        " p ";
+    } 
+    section img {
+        grid-area: h1;
+    }
+    section h1 {
+        grid-area: img;
+    }
+    .p {
+        grid-area: p;
+        padding: 0;
+    }
 }
 
 
