@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito:wght@300&display=swap');
 :root {
     --color--background: rgb(238, 245, 238);
 }
@@ -13,18 +14,32 @@ body {
 section {
     display: grid;
     grid-template-areas: 
-    " . h ."   
-    " . t ."    
-    " n . m";
+    " h h h"   
+    " m m m"    
+    " f f f";
 }
 body section h1 {
-    grid-area: h 1 auto;
+    grid-area: h / 1 / 1;
     justify-self: center;
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
 }
 
 body section p {
-    grid-area: n / 3 / 1;
+    grid-area: m / 2 / 3;
+    font-size: 1.8em;
+    text-align: center;
+    padding: 2em 2em 0em 2em;
+    font-family: 'Nunito', sans-serif;
+
+
 }
+
+body section img {
+    grid-area: f / 1 / 2;
+    width: 100%;
+}
+
 
 
 
