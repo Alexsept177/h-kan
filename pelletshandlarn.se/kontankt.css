@@ -1,0 +1,18 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+
+main form input:first-child {
+    grid-column: 2;
+}
+
+main form input:last-child {
+
+}
