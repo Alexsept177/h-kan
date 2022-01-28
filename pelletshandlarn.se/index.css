@@ -1,15 +1,23 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito:wght@300&display=swap');
+
+/* färger tag*/
 :root {
     --color--background: rgb(238, 245, 238);
     --color--text:black;
     --color--hover--text: rgb(39, 39, 39);
 }
+
+/*  index specifikationer och färgen*/
 body {
     width: 100%;
     height: 100%;
     background-color: var(--color--background);
     margin: 0;
 }
+
+/* main grid updelningen  */
 main {
     display: grid;
     grid-template-rows: 0fr 0fr .319fr;
@@ -18,17 +26,21 @@ main {
     " img . p";
     
 }
+
+/*  index title design*/
 main h1 {
     grid-area: h1 ;
     justify-self: center;
     font-size: 2rem;
     font-family: 'Nunito', sans-serif;
 }
+
+/* img position och storlek*/
 main img {
     grid-area: img ;
     width: 100%;
 }
-
+/* positionen på website beskrivningen och buttom till produkter */
 main div {
     grid-area: p;
      display: grid;
@@ -36,7 +48,7 @@ main div {
      " p "
      " a ";
 }
-
+/* designen till website beskrivningen */
 main div p {
     grid-area: p ;
     font-size: 1.5rem;
@@ -44,6 +56,7 @@ main div p {
     padding: 2rem 2rem 0rem 2rem;
     font-family: 'Nunito', sans-serif;
 }
+/* buttom till produkter design*/
 main div a {
     grid-area: a;
     font-size: 5em;
@@ -52,7 +65,7 @@ main div a {
     text-align: center;
     font-weight: bold;
 }
-
+/* om du sätter pilen ovanför texten visas en annan färg */
 main div a:hover {
     color:var(--color--hover--text);
 
@@ -61,8 +74,9 @@ main div a:hover {
 
 
 
-
+/* för att den ska vara responsive den är ordna om sina positioner */
 @media screen and (max-width: 1250px)  {
+    /* grid positonen använd av area*/
     main  {
         display: grid;
         grid-template-areas: 
@@ -70,16 +84,19 @@ main div a:hover {
         " img "
         " p ";
     } 
+    /* titlen position och design */
     main h1 {
         grid-area: h1;
         font-size: 1.8rem;
         text-align: center;
     } 
+    /* image position storlek */
     main img {
         grid-area: img;
         width: 70%;
         justify-self: center;
     }
+    /* beskrivningen position storlek*/ 
     .p {
         grid-area: p;
         padding: 0;
