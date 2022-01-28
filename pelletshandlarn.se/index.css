@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Nunito:wght@300&display=swap');
 :root {
     --color--background: rgb(238, 245, 238);
+    --color--text:black;
+    --color--hover--text: rgb(39, 39, 39);
 }
 body {
     width: 100%;
@@ -26,13 +28,40 @@ main img {
     grid-area: img ;
     width: 100%;
 }
-main p {
+
+main div {
+    grid-area: p;
+     display: grid;
+     grid-template-areas: 
+     " p "
+     " a ";
+}
+
+main div p {
     grid-area: p ;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 2rem 2rem 0rem 2rem;
     font-family: 'Nunito', sans-serif;
 }
+main div a {
+    grid-area: a;
+    font-size: 5em;
+    text-decoration: none;
+    color:var(--color--text);
+    text-align: center;
+    font-weight: bold;
+}
+
+main div a:hover {
+    color:var(--color--hover--text);
+
+}
+
+
+
+
+
 @media screen and (max-width: 1250px)  {
     main  {
         display: grid;
